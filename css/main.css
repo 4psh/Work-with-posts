@@ -1,0 +1,32 @@
+.container img {
+    width: 600px;
+  }
+
+.container button {
+    margin-left: 440px;
+    width: 160px;
+  }
+
+  #goNext{
+    width: 120px;
+  }
+
+  .fp1 {
+    border: 1px solid #5ab2ff;
+    width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .fp2, .fp3 {
+    width: 830px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .fp2 button {
+    width: 130px;
+    margin: 0 5px;
+  }
