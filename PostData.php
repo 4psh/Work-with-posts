@@ -43,7 +43,7 @@ class PostData
         return null;
     }
 
-    public function getOnePost($id) {
+   /* public function getOnePost($id) {
         $stmt = $this->pdo->prepare("SELECT * FROM posts WHERE id_user=:id");
         $stmt->execute([
             "id" => $id
@@ -51,7 +51,7 @@ class PostData
             return $stmt->fetch();
     }
 
-    /*public function getAboutPost($id) {
+    public function getAboutPost($id) {
         $s = $this->getOnePost($id);
         if($s) {
             $_SESSION['id_post'] = $s->id_post;
