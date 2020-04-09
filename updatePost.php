@@ -4,13 +4,14 @@ session_start();
 if(!isset($_GET['id']) || empty($_GET['id'])) {
     exit;
 }
-$post=$data->getPost($_GET['id']);
+$post=$data->getOnePost($_GET['id']);
 if(!$post) {
     header("Location: /");
     exit;
 }
 if(isset($_POST['btnPost'])) {
     $_POST['id'] = $_GET['id'];
+    $_POST['datePublication'] = date("Y-m-d");
     $data->updatePost($_POST);
     header("Location: /");
     exit;
