@@ -42,6 +42,8 @@ class userData
         else
         {
             $_SESSION['auth'] = false;
+            $_SESSION['alertColor'] = "danger";
+            $_SESSION['alert'] = "Неверный логин или пароль!";
 
         }
     }
