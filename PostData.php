@@ -62,10 +62,15 @@ class PostData
             return $stmt->fetchAll();
     }
 
-   /* public function deletePost($data) {
+    public function deletePost($id) {
         $stmt = $this->pdo->prepare("DELETE FROM posts WHERE id_post=:id_post");
-
-    }*/
+        if($stmt->execute([
+            "id_post" => $id
+            ])) {
+            return $this->pdo->lastInsertId();
+        };
+        return -1;
+    }
 
     public function updatePost($data) {
         $stmt = $this->pdo->prepare("UPDATE posts set title=:title, description=:description, datePublication=:datePublication, image=:image LIKE id_post=:id_post");
