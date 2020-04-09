@@ -37,6 +37,9 @@
     <div class='alert alert-secondary'
          role='alert'>Нет своего аккаунта? <a href='registr.php'>Зарегистрироваться</a>
     </div>
+        <div class="alert alert-<?= $_SESSION['alertColor'] ?>
+         role='alert' "><?= $_SESSION['alert'] ?>
+    </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Логин:</label>
         <input type="email" class="form-control"
