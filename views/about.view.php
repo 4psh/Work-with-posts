@@ -1,29 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="img/1.png" type="image/x-icon">
-    <title>Информация о посте</title>
-    <style>
-        li {
-            margin-right: 10px;
-        }
+<form method="post">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="img/<?= $posts->image ?>" class="card-img-top img-thumbnail" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $posts->title ?></h5>
+                            <p class="card-text"><?= $posts->description ?></p>
+                            <hr>
+                            <p class="card-text"><small class="text-muted"><?= $posts->datePublication ?></small></p>
+                            <a href="home.php" class="btn btn-primary" >Назад</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</form>
 
-        .search {
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-//Вывод всей информации о выбранном посте
-</div>
-<script src="js/jquery-3.4.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
