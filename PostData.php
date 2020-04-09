@@ -43,20 +43,15 @@ class PostData
         return null;
     }
 
-   /* public function getOnePost($id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM posts WHERE id_user=:id");
+    public function getOnePost($id) {
+        $stmt = $this->pdo->prepare("SELECT * FROM posts WHERE id_post=:id");
         $stmt->execute([
             "id" => $id
         ]);
-            return $stmt->fetch();
+            $res=$stmt->fetch();
+            return $res;
     }
 
-    public function getAboutPost($id) {
-        $s = $this->getOnePost($id);
-        if($s) {
-            $_SESSION['id_post'] = $s->id_post;
-        }
-    }*/
 
     public function searchPost($id, $search)
     {
