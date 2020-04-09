@@ -10,7 +10,7 @@
                     <p class="card-text"><?= $p->description ?></p>
                     <hr>
                     <p class="card-text"><small class="text-muted"><?= $p->datePublication ?></small></p>
-                    <button name="about" class="btn btn-primary">Подробнее</button>
+                    <a href="about.php?id=<?=$p->id_post?>" class="btn btn-primary">Подробнее</a>
                 </div>
             </div>
                 </div>
