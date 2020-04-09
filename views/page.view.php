@@ -69,8 +69,8 @@
                                 <p class="card-text"><?= $p->description ?></p>
                                 <hr>
                                 <p class="card-text"><small class="text-muted"><?= $p->datePublication ?></small></p>
-                                <button name="deleteBtn" class="btn btn-danger">Удалить</button>
-                                <button name="updateBtn" class="btn btn-primary">Изменить</button>
+                                <a href="deletePost.php?id=<?=$p->id_post?>"  class="btn btn-danger">Удалить</a>
+                                <a href="updatePost.php?id=<?=$p->id_post?>" class="btn btn-primary">Изменить</a>
                             </div>
                         </div>
                     </div>
