@@ -1,14 +1,14 @@
 <?php
 session_start();
 require_once "bootstrap.php";
-
-if(isset($_POST['btnPost'])) {
-    $id = $data->deletePost($_POST, $_SESSION['id']);
-    header("Location: page.php");
+if(!isset($_GET['id']) || empty($_GET['id']))
+{
     exit;
 }
-if(isset($_POST['back'])) {
-    header("Location: page.php");
+
+if($data->deletePost($_GET['id'])) {
+    header("Location: /");
+    exit;
 }
 
-require_once "deletePost.view.php";
+require_once "page.php";
